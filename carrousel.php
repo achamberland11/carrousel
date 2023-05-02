@@ -1,17 +1,17 @@
 <?php
 /**
  * Plugin Name: Carrousel
- * Author: Nicolas Carriere
- * Author uri: https://github.com/nicolasDesrosiers
- * Description: Permet d'afficher les images d'une galerie dans une boîte modale naviguable
+ * Author: Antoine Chamberland
+ * Author uri: https://github.com/achamberland11
+ * Description: Permet d'afficher les images d'une galerie dans une boîte modale navigable
  */
 
- /* style.css  formater et animer le carrousel */
- /* carrousel.js  pour contrôler le carrousel */
- /* boîte modale qui contiendra le carrousel */
+    /* style.css pour formater et animer le caroussel */
+    /* carrousel.js pour contrôler le carrousel */
+    /* Boîte modale qui contiendra le carrousel */
 
- /*
- filemtime() // retourne en milliseconde le temps de la dernière sauvegarde
+/*
+    filemtime() // retourne en milliseconde le temps de la dernière sauvegarde
 plugin_dir_path() // retourne le chemin du répertoire du plugin
 __FILE__ // une constante contenant le chemin du fichier en train de s'exécuter
 wp_enqueue_style() // Intègre le link:css dans la page
