@@ -1,17 +1,17 @@
 <?php
 /**
  * Plugin Name: Carrousel
- * Author: Antoine Chamberland
- * Author uri: https://github.com/achamberland11
- * Description: Permet d'afficher les images d'une galerie dans une boîte modale navigable
+ * Author: Nicolas Carriere
+ * Author uri: https://github.com/nicolasDesrosiers
+ * Description: Permet d'afficher les images d'une galerie dans une boîte modale naviguable
  */
 
-    /* style.css pour formater et animer le caroussel */
-    /* carrousel.js pour contrôler le carrousel */
-    /* Boîte modale qui contiendra le carrousel */
+ /* style.css  formater et animer le carrousel */
+ /* carrousel.js  pour contrôler le carrousel */
+ /* boîte modale qui contiendra le carrousel */
 
-/*
-    filemtime() // retourne en milliseconde le temps de la dernière sauvegarde
+ /*
+ filemtime() // retourne en milliseconde le temps de la dernière sauvegarde
 plugin_dir_path() // retourne le chemin du répertoire du plugin
 __FILE__ // une constante contenant le chemin du fichier en train de s'exécuter
 wp_enqueue_style() // Intègre le link:css dans la page
@@ -40,11 +40,14 @@ add_action('wp_enqueue_scripts', 'enfiler_script_css' );
 
 function genere_boite()
 {
-    return '<button class="carrousel__ouvrir">Ouvrir Carrousel</button>
+    return '
+            
             <div class="carrousel">
+                <i class="fleche__gauche"></i>
                 <button class="carrousel__x">X</button>
                 <figure class="carrousel__figure"></figure>
                 <form class="carrousel__form"></form>
+                <i class="fleche__droite"></i>
             </div>';
 }
 add_shortcode('carrousel', 'genere_boite');
