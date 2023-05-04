@@ -6,19 +6,6 @@
  * Description: Permet d'afficher les images d'une galerie dans une boîte modale navigable
  */
 
-    /* style.css pour formater et animer le caroussel */
-    /* carrousel.js pour contrôler le carrousel */
-    /* Boîte modale qui contiendra le carrousel */
-
-/*
-    filemtime() // retourne en milliseconde le temps de la dernière sauvegarde
-plugin_dir_path() // retourne le chemin du répertoire du plugin
-__FILE__ // une constante contenant le chemin du fichier en train de s'exécuter
-wp_enqueue_style() // Intègre le link:css dans la page
-wp_enqueue_script() // intègre le script dans la page
-wp_enqueue_scripts // le hook qui permettra d'enfiler le css et le script
-*/
-
 function enfiler_script_css()
 {
    $version_css =  filemtime(plugin_dir_path(__FILE__) . 'style.css');
