@@ -11,8 +11,6 @@
   /* -------------------------------------------------------- Variable de la galerie */
   let galerie = document.querySelector(".wp-block-gallery")
   let galerie__img = galerie.querySelectorAll("img")
-  // console.log("galerie__img: " + galerie__img.length)
-  // console.log(carrousel.tagName)
   /** ---------------------------------------------------- Positionnement de l'img active du carrousel */
   
   let index = 0 
@@ -33,8 +31,7 @@
        carrousel.classList.add('carrousel--activer')
      }
      index = this.dataset.index
-     afficher_image(index)                      
-     //console.log('numero index : ', index)
+     afficher_image(index)
    })
 
    creation_img_carrousel(elm)
@@ -46,7 +43,6 @@
   
   /* ----------------------------------------------------  fermer boîte modale */
   carrousel__x.addEventListener('mousedown', function(){
-      //console.log('fermer la boîte modale')
       carrousel.classList.remove('carrousel--activer')
 
   })
@@ -54,7 +50,6 @@
   /* ----------------------------------------------------  changer img avec fleches */
 
   fleche__gauche.addEventListener('mousedown', function(){
-   //console.log('changer photo a gauche',index)
      if(index == 0){
        index = galerie__img.length-1
      } else { index--}
@@ -63,7 +58,6 @@
  })
 
  fleche__droite.addEventListener('mousedown', function(){
-   //console.log('changer photo a droite',index)
      if(index == galerie__img.length-1){
        index=0
      } else{index++}
@@ -74,13 +68,9 @@
 
 
   function creation_img_carrousel(elm){
-
-    //console.log(elm.getAttribute('src'))
     let img = document.createElement('img')
-    //img.setAttribute('src', elm.getAttribute('src'))
     img.src = elm.src
     img.classList.add('carrousel__img')
-    //console.log (img.getAttribute('src'))
     carrousel__figure.appendChild(img)
     
   }
@@ -93,7 +83,6 @@
   function creation_radio_carrousel(){
 
   let rad = document.createElement('input')
-  //console.log(rad.tagName)
   rad.setAttribute('type', 'radio')
   rad.setAttribute('name', 'carrousel__rad')
   rad.classList.add('carrousel__rad')
@@ -107,7 +96,6 @@
    
    index = this.dataset.index
    afficher_image(index)
-   //console.log('index : ',this.dataset.index)
    
   })
   }
@@ -115,12 +103,9 @@
   function afficher_image(index){
 
    if(dernier__index != -1){
-     //carrousel__figure.children[dernier__index].style.opacity = 0
      carrousel__figure.children[dernier__index].classList.remove('carrousel__img--activer')
      carrousel__form.children[dernier__index].checked = false 
-   } 
-   //carrousel__figure.children[this.dataset.index].style.opacity = 1
-   //console.log(index)
+   }
   
    carrousel__figure.children[index].classList.add('carrousel__img--activer')
    carrousel__form.children[index].checked = true
