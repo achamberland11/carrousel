@@ -34,8 +34,8 @@ function enfiler_script_css()
             $version_js,
             true
     );
-
 }
+
 add_action('wp_enqueue_scripts', 'enfiler_script_css' );
 
 function genere_boite()
