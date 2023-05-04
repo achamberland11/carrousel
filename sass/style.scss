@@ -4,7 +4,7 @@
     height: 75%;
     top:15%;
     left:15%;
-    transform: scale(0);
+    transform: scale(0) rotate(0deg);
     transition: transform .5s, opacity 1s;
     z-index: 5;
     overflow: hidden;
@@ -13,8 +13,7 @@
    
    .carrousel--activer{
        opacity: 1;
-       transform: scale(1);
-      
+       transform: scale(1) rotate(360deg);
    }
    
    
@@ -45,13 +44,13 @@
        left: 0;
        right: 0;
        opacity: 0;
-       transform: scale(0%);
+       transform: scale(0%) rotate(0deg);
        transition: opacity 0.5s, transform 1s;
    }
    
    .carrousel__img--activer{
    
-       transform: scale(100%);
+       transform: scale(100%) rotate(360deg);
        opacity: 1;
    }
    
