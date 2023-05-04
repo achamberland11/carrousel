@@ -22,22 +22,21 @@
   right: 5px;
   padding: 0.4rem;
   width: 2rem;
-  border: whitesmoke 1px solid;
+  border: crimson 1px solid;
   border-radius: 3rem;
-  background-color: rgba(68, 68, 68, 0.7);
-  color: whitesmoke;
+  background-color: #333;
+  color: crimson;
   z-index: 10;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .carrousel__img {
-  object-fit: cover;
+  object-fit: contain;
   width: 90%;
   height: 90%;
   position: absolute;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 5%;
+  right: 5%;
   opacity: 0;
   transform: scale(0%) rotate(0deg);
   transition: opacity 0.5s, transform 1s;
@@ -62,21 +61,21 @@
 }
 
 .fleche__gauche {
-  border: solid #f5f5f5 5px;
+  border: solid crimson 5px;
   border-width: 0 8px 8px 0;
   display: inline-block;
   padding: 15px;
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
   z-index: 10;
   position: absolute;
   left: 5%;
   bottom: 50%;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
   transition: all 0.5s;
 }
 
 .fleche__droite {
-  border: solid whitesmoke 5px;
+  border: solid crimson 5px;
   border-width: 0 8px 8px 0px;
   display: inline-block;
   padding: 15px;
